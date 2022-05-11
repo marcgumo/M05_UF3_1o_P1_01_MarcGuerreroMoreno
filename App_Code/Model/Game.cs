@@ -16,7 +16,7 @@ namespace M05_UF3_P2_Template.App_Code.Model
 
         public Game()
         {
-
+            
         }
         public Game(DataRow row)
         {
@@ -30,6 +30,7 @@ namespace M05_UF3_P2_Template.App_Code.Model
             }
             try
             {
+                Console.WriteLine(row[1]);
                 Product_Id = int.Parse(row[1].ToString());
             }
             catch
@@ -38,6 +39,7 @@ namespace M05_UF3_P2_Template.App_Code.Model
             }
             try
             {
+                Console.WriteLine(row[2]);
                 Rating = float.Parse(row[2].ToString());
             }
             catch
