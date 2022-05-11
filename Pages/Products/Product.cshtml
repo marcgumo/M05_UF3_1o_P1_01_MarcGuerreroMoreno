@@ -1,0 +1,34 @@
+﻿@page
+@model M05_UF3_P2_Template.Pages.Products.ProductModel
+@using M05_UF3_P2_Template.App_Code.Model
+@{
+    Game game = new Game();
+    game.Product_Id = Model.Game_Id;
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Size</th>
+            <th>Developer</th>
+            <th>Editor</th>
+            <th></th>
+        </tr>
+    </thead>
+</table>
+
+<form method="post">
+    <button type="submit" class="btn btn-primary float-right"><span class="material-icons">save</span></button>
+    <input type="text" asp-for="product.Summary" />
+    <input type="number" step="any" asp-for="product.Price" />
+    <input type="number" asp-for="product.Size" />
+    <input type="number" asp-for="product.Developer_id" />
+    <input type="number" asp-for="product.Editor_id" />
+
+    <a class="btn btn-primary float-right" asp-page="/Products/Game" asp-route-id="@Model.Game_Id" title="Edit game">
+        <span class="material-icons text-white">edit</span>
+    </a>
+</form>
