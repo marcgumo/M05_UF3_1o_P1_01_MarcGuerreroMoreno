@@ -1,0 +1,24 @@
+﻿@page
+@model M05_UF3_P2_Template.Pages.Products.GameModel
+@{
+}
+
+<form method="post" id="form"></form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product_Id</th>
+            <th>Rating</th>
+            <th>Version</th>
+            <th></th>
+        </tr>
+    </thead>
+</table>
+
+<form method="post">
+    <button type="submit" class="btn btn-primary float-right"><span class="material-icons">save</span></button>
+    <input type="text" placeholder="@Model.game.Product_Id" asp-for="game.Rating" />
+    <input type="number" step="any" placeholder="@Model.game.Rating" asp-for="game.Rating" />
+    <input type="text" placeholder="@Model.game.Version" asp-for="game.Version" />
+</form>
